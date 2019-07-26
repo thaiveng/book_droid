@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#5f5f7f</color>
+    <color name="colorPrimary">#565e7c</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorBackground">#565E7C</color>
+    <color name="colorLogo">#5BE223</color>
+    <color name="colorHint">#ffffff</color>
+    <color name="bgColorToolbar">#fff</color>
+    <color name="profile_default_tint">#e0e0e0</color>
+</resources>

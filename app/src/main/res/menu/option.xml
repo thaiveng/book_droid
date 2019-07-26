@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group
+        android:checkableBehavior="single"
+        >
+
+        <item
+            android:icon="@drawable/ic_store"
+            android:id="@+id/item_store"
+            android:title="Store"
+            app:showAsAction="never"
+            >
+        </item>
+
+
+    </group>
+
+
+
+    <group
+        android:checkableBehavior="single"
+        >
+
+        <item
+            android:icon="@drawable/ic_group_black_24dp"
+            android:id="@+id/item_about_us"
+            android:title="About Us"
+            app:showAsAction="never"
+            >
+        </item>
+    </group>
+
+
+    <group
+        android:checkableBehavior="single"
+        >
+
+        <item
+            android:icon="@drawable/term_logo"
+            android:id="@+id/item_term_of_use"
+            android:title="Term of Use"
+            app:showAsAction="never"
+            >
+        </item>
+
+    </group>
+
+
+    <group
+        android:checkableBehavior="single"
+        >
+        <item
+            android:icon="@drawable/sign_out"
+            android:id="@+id/item_signout"
+            android:title="Signout"
+            app:showAsAction="never"
+            >
+        </item>
+
+    </group>
+
+
+
+
+</menu>
