@@ -10,12 +10,11 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
-import android.widget.Toolbar;
-
 import com.thaiveng.bookdroid.R;
 import com.thaiveng.bookdroid.activity.All_User_Feed_activity;
 import com.thaiveng.bookdroid.activity.Post_Feed_Activity;
@@ -23,7 +22,6 @@ import com.thaiveng.bookdroid.adapter.FeedAdapter;
 import com.thaiveng.bookdroid.adapter.FeedUserAdpater;
 import com.thaiveng.bookdroid.model.FeedModel;
 import com.thaiveng.bookdroid.model.FeedUserModel;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -84,9 +82,9 @@ public class Feed_fragment extends Fragment implements AppBarLayout.OnOffsetChan
 
         recyclerViewBookFeed.setAdapter(feedAdapter);
 
-        recyclerViewUserFeed = view.findViewById(R.id.recycler_user_feed);
+//        recyclerViewUserFeed = view.findViewById(R.id.recycler_user_feed);
 
-        recyclerViewUserFeed.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
+//        recyclerViewUserFeed.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
 
         FeedUserModel feedUserModel1 = new FeedUserModel("Thol Thaiveng", "1000 followers", "100 recommendatin", R.drawable.user_profile);
         FeedUserModel feedUserModel2 = new FeedUserModel("Uorn Ty", "2000 followers", "200 recommendatin", R.drawable.user_profile);
@@ -102,7 +100,7 @@ public class Feed_fragment extends Fragment implements AppBarLayout.OnOffsetChan
 
         feedUserAdpater = new FeedUserAdpater(feedUserList, getActivity());
 
-        recyclerViewUserFeed.setAdapter(feedUserAdpater);
+//        recyclerViewUserFeed.setAdapter(feedUserAdpater);
 
 
         floatingActionButton = view.findViewById(R.id.fab);

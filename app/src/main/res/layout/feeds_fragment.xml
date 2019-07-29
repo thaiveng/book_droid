@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <android.support.design.widget.AppBarLayout
-        android:fitsSystemWindows="true"
-        android:theme="@style/Theme.Design.Light.NoActionBar"
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/Theme.Design.Light.NoActionBar">
 
         <android.support.design.widget.CollapsingToolbarLayout
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
             android:id="@+id/collapsing"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
             <RelativeLayout
-                app:layout_collapseMode="pin"
-                android:fitsSystemWindows="true"
                 android:id="@+id/rel_all_btn_feed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <android.support.v7.widget.Toolbar
-                    xmlns:android="http://schemas.android.com/apk/res/android"
+                android:fitsSystemWindows="true"
+                android:orientation="horizontal"
+                app:layout_collapseMode="pin">
+
+                <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/toolBarFeed"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
-                    android:background="@color/colorPrimary"
-                    android:id="@+id/toolBarFeed">
-                </android.support.v7.widget.Toolbar>
+                    android:background="@color/colorPrimary"></android.support.v7.widget.Toolbar>
 
                 <LinearLayout
-                    android:layout_below="@id/toolBarFeed"
                     android:id="@+id/all_books_click"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/toolBarFeed"
                     android:layout_alignParentRight="true"
                     android:orientation="horizontal">
 
@@ -60,27 +60,22 @@
                 </LinearLayout>
 
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/recycler_user_feed"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/recycler_feed"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/all_books_click">
+                    android:layout_below="@id/all_books_click"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
                 </android.support.v7.widget.RecyclerView>
 
             </RelativeLayout>
+
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 
-    <android.support.v7.widget.RecyclerView
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:id="@+id/recycler_feed"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/app_bar"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
 
-    </android.support.v7.widget.RecyclerView>
 
 
     <android.support.design.widget.FloatingActionButton
@@ -94,4 +89,4 @@
         android:layout_marginTop="100dp"
         android:src="@drawable/add_icon_floatingbutton" />
 
-</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
